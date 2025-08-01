@@ -1,0 +1,36 @@
+-- chown -R www-data:www-data E-Commerswebsite
+
+                                       this is command is used to give the permission folder  E-Commerswebsite. basically we are cloned project has  a root user. we have to give the permission to apache users
+
+Explaination for the command:
+                     
+
+--changes the ownership of the directory named E-Commerswebsite and all of its contents (files and subdirectories) to the user www-data and the group www-data.
+
+
+
+chown           : Stands for "change owner"; it's used to modify the owner and/or group of files or directories.
+
+-R              : The recursive flag. It applies the ownership change to the specified directory and everything inside it (all subdirectories and files).
+
+www-data:www-data: 
+
+                   The part before the colon (www-data) is the new owner user.
+
+                   The part after the colon (www-data) is the new group.
+
+E-Commerswebsite   : The target directory to apply the ownership change. Note that Linux is case-sensitive, so the directory name must match exactly as listed.
+
+--------------
+If you build a website, giving the web server (www-data) ownership of all your site’s files helps avoid problems. 
+This makes sure the server can open, change, or display your website without getting blocked by file permissions. 
+In short: the website works smoothly because the server has the access it needs.
+
+realtime example:
+drwxr-xr-x 6 www-data www-data 4.0K Aug  1 03:28 E-Commerswebsite
+
+
+
+
+
+         
