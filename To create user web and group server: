@@ -1,0 +1,20 @@
+1) Command to create  group :
+
+                   sudo groupadd  Devops  --
+                                       
+
+2 ) Create user  :
+                   sudo adduser username
+                   ex: sudo adduser vikas
+
+3) adding user to group
+       usermod -a -G groupname username
+
+        add an existing user to an existing group on Linux, you commonly use the usermod command with the -a (append) and -G options:
+
+
+how to check the number of user and group
+          1)  To count how many users are there:
+                 cat /etc/passwd | wc -l
+          2)  To count how many groups are there:                //wc -l in Linux is used to count the number of lines in a file or input.
+                   cat /etc/group | wc -l
