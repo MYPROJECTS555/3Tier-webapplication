@@ -59,6 +59,11 @@ make sure we have to give proper permission before hosting web server on ec2.
 --------------------------------------------------------------------------------------------------------------------------------------
  
 
+step 3 
+
+creating virtual host :
+
+                        A virtual environment is like a separate little workspace on your computer where you can run and build your web application safely.It keeps your project’s files, tools, and libraries separate from everything else on your computer. This way, different projects don’t get mixed up or cause problems with each other.
 
      
 
