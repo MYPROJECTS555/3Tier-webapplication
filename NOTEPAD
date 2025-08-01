@@ -1,3 +1,7 @@
+git the project from https://github.com/SHRIDHARMUDASHI/E-Commerswebsite.git
+-----------------------------------------------------------------------------------
+
+
 -- chown -R www-data:www-data E-Commerswebsite
 
                                        this is command is used to give the permission folder  E-Commerswebsite. basically we are cloned project has  a root user. we have to give the permission to apache users
@@ -38,6 +42,26 @@ If you want to set ownership to a user named alice and a group named webusers, y
 
 
 chown -R alice:webusers E-Commerswebsite
+---------------------------------------------------------------------------------------------------------------------------------
+step 2 :
+
+giving the permission like read write and execute
+
+for example :
+drwxr-xr-x 6 www-data www-data 4096 Aug  1 03:28 E-Commerswebsite    // it has all permission
+
+if the folder ther doesn't  have read write and execute permission 
+
+run this command :  chmod -R 755  E-Commerswebsite
+
+make sure we have to give proper permission before hosting web server on ec2.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+ 
+
+
+     
+
 
 
 
