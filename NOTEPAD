@@ -30,6 +30,15 @@ realtime example:
 drwxr-xr-x 6 www-data www-data 4.0K Aug  1 03:28 E-Commerswebsite
 
 
+we can use any user:group you want, but usually www-data is chosen because web servers often run as that user. Choose the right user and group for your setup and needs!
+
+Examples:
+
+If you want to set ownership to a user named alice and a group named webusers, you would use:
+
+
+chown -R alice:webusers E-Commerswebsite
+
 
 
 
