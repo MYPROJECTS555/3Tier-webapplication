@@ -65,7 +65,13 @@ creating virtual host :
 
                         A virtual environment is like a separate little workspace on your computer where you can run and build your web application safely.It keeps your project’s files, tools, and libraries separate from everything else on your computer. This way, different projects don’t get mixed up or cause problems with each other.
 
-     
+
+for example: if we hosting web application using apache web browser on ubuntu os.
+
+goto below path and edit the file
+
+vi /etc/apache2/site-availability/E-commersewebsite.conf   -here are we are creating the E-commersewebsite.conf  inside siteavailibility.
+
 
 
 
