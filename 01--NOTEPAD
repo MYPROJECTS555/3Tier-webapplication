@@ -74,6 +74,50 @@ vi /etc/apache2/site-availability/E-commersewebsite.conf   -here are we are crea
 
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------
+E-commersewebsite.conf    - we have to configure 
+
+<VirtualHost *:80>                                         // this  is apache port number or webrowser port number.  
+
+    ServerAdmin admin@example.com                          //if we have any admin credential we can give here
+
+    DocumentRoot /var/www/E-CommerceWebsite                // this is project path . E-CommerceWebsite contain all website itms.
+
+    ServerName example.com                                //  here we have to give the domain name . if we don't have any domain name . aws will give free and default domain name  when we host the ec2 instance.
+                                                              we can fid the default DNS name inside ec2 configure . then replace example.com to below public DNS  name
+                                                               Public_DNS :   ec2-13-60-223-60.eu-north-1.compute.amazonaws.com 
+
+    ServerAlias www.example.com                            // here giving domain name with www , here we have to then replace example.com to below public DNS  name
+                                                               Public_DNS :   www. ec2-13-60-223-60.eu-north-1.compute.amazonaws.com 
+                                          
+
+    <Directory /var/www/E-CommerceWebsite>                it will go to inside E-CommerceWebsite and 
+        Options +FollowSymLinks                            create the symbolic links
+        AllowOverride All                                   taking all permission  and take grant and execute all files and displya the page.
+
+     Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log                during access the file if we found any error  that will be stored inside the error.log . or application error
+    CustomLog ${APACHE_LOG_DIR}/access.log combined      here all user ip address will checked here , how many peoples are using the website.
+</VirtualHost> 
+
+
+
+
+
+thses are all are virtual host configuration.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+if we browser domain name we will not get website page . because we just created a virtualbox , we have to enable it. 
+to enable run below command 
+
+a2ensite  E-commersewebsite.conf  // means apache2 enable site 'virtualbox file name'.
+
+a2enmod rewrite                      //  this command is used to give the permission to read and write
+systemctl restart apache2.service     //  serivce is restarted we can acess the web site
+
 
 
 
