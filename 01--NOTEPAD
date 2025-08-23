@@ -108,6 +108,28 @@ E-commersewebsite.conf    - we have to configure
 
 thses are all are virtual host configuration.
 
+-------------------------------------------------------------------------------------------------------------------
+
+<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    DocumentRoot /var/www/E-CommerceWebsite
+    ServerName ec2-13-60-223-60.eu-north-1.compute.amazonaws.com
+    ServerAlias www.ec2-13-60-223-60.eu-north-1.compute.amazonaws.com
+
+    <Directory /var/www/E-CommerceWebsite>
+        Options +FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
 ------------------------------------------------------------------------------------------------------------------------------
 
 if we browser domain name we will not get website page . because we just created a virtualbox , we have to enable it. 
